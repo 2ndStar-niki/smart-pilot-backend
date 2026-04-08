@@ -5,6 +5,11 @@ import http from "http";
 const app = express();
 app.use(express.json());
 
+// ✅ これを追加
+app.get("/", (req, res) => {
+  res.status(200).send("TRASS backend alive");
+});
+
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
 
