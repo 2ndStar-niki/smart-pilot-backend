@@ -1,0 +1,13 @@
+{
+  "name": "smart-pilot-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "relay-server.mjs",
+  "scripts": {
+    "start": "node relay-server.mjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  }
+}
