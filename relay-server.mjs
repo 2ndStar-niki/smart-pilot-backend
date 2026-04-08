@@ -32,7 +32,11 @@ app.post("/telemetry", (req, res) => {
   res.sendStatus(200);
 });
 
-const PORT = process.env.PORT || 8787;
+const PORT = process.env.PORT;
+
+if (!PORT) {
+  throw new Error("PORT is not defined");
+}
 
 server.listen(PORT, () => {
   console.log("relay server running on", PORT);
